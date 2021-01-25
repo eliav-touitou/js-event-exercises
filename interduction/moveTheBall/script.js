@@ -1,6 +1,7 @@
 window.addEventListener("DOMContentLoaded", (loaded) => {
-  
-  field.addEventListener("click", (event) => {
+  const field = document.getElementById("field");
+
+  field.onclick = function (event) {
     // window-relative field coordinates
     let fieldCoords = this.getBoundingClientRect();
 
@@ -17,7 +18,7 @@ window.addEventListener("DOMContentLoaded", (loaded) => {
         fieldCoords.left -
         field.clientLeft -
         ball.clientWidth / 2,
-    });
+    };
 
     // prevent crossing the top field boundary
     if (ballCoords.top < 0) ballCoords.top = 0;
