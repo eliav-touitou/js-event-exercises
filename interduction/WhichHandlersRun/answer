@@ -1,0 +1,2 @@
+both will run because the removeEventListener is not the right way to delete the handler,
+ its only creating a new function that looks the same.
