@@ -1,7 +1,8 @@
 window.addEventListener("DOMContentLoaded", (loaded) => {
   const field = document.getElementById("field");
 
-  field.onclick = function (event) {
+  field.addEventListener("click", moveBall);
+  function moveBall(event) {
     // window-relative field coordinates
     let fieldCoords = this.getBoundingClientRect();
 
@@ -38,5 +39,5 @@ window.addEventListener("DOMContentLoaded", (loaded) => {
 
     ball.style.left = ballCoords.left + "px";
     ball.style.top = ballCoords.top + "px";
-  };
+  }
 });
